@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leaderboard</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+<header class="topbar">
+  <strong>🏆 Leaderboard</strong>
+  <a class="btn small-btn" href="dashboard.html">Dashboard</a>
+</header>
+<div class="container">
+  <div class="card">
+    <h1>Top Students</h1>
+    <p>Rankings are based on the best percentage recorded for each student.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Rank</th><th>Student</th><th>Level</th><th>Score</th><th>Date</th></tr></thead>
+        <tbody id="leaderboardBody"><tr><td colspan="5">Loading...</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<script src="js/supabase.js"></script>
+<script src="js/leaderboard.js"></script>
+</body>
+</html>

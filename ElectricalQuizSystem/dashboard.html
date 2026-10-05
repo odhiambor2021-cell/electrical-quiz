@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Dashboard</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+<header class="topbar">
+  <strong>⚡ EEE Quiz System</strong>
+  <button id="logoutBtn" class="btn small-btn">Logout</button>
+</header>
+<div class="container">
+  <div class="card">
+    <h1 id="welcome">Student Dashboard</h1>
+    <p id="studentInfo"></p>
+  </div>
+
+  <h2 class="section-title">Choose Quiz Level</h2>
+  <div class="grid three">
+    <a class="card level" href="quiz.html?level=Beginner">
+      <span>🟢</span><h2>Beginner</h2><p>Basic electrical concepts, units, safety and components.</p>
+    </a>
+    <a class="card level" href="quiz.html?level=Intermediate">
+      <span>🟡</span><h2>Intermediate</h2><p>Circuits, machines, electronics and calculations.</p>
+    </a>
+    <a class="card level" href="quiz.html?level=Advanced">
+      <span>🔴</span><h2>Advanced</h2><p>Technical analysis, electronics and engineering practice.</p>
+    </a>
+  </div>
+
+  <div class="grid two">
+    <a class="card action-card" href="leaderboard.html">🏆 View Leaderboard</a>
+    <div class="card">
+      <h2>My Results</h2>
+      <div id="myResults">Loading...</div>
+    </div>
+  </div>
+</div>
+<script src="js/supabase.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teacher / Admin Dashboard</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+<header class="topbar">
+  <strong>🧑‍🏫 Teacher / Admin Dashboard</strong>
+  <button id="logoutBtn" class="btn small-btn">Logout</button>
+</header>
+<div class="container">
+  <div class="grid three">
+    <div class="stat card"><span id="studentCount">0</span><small>Students</small></div>
+    <div class="stat card"><span id="attemptCount">0</span><small>Quiz Attempts</small></div>
+    <div class="stat card"><span id="averageScore">0%</span><small>Average Score</small></div>
+  </div>
+
+  <div class="card">
+    <h2>Recent Quiz Results</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Student</th><th>Level</th><th>Score</th><th>Percentage</th><th>Date</th></tr></thead>
+        <tbody id="resultsBody"><tr><td colspan="5">Loading...</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Question Bank</h2>
+    <p>Questions can be inserted through the Supabase SQL editor for this starter version. A question-management form can be added next.</p>
+    <a class="btn" href="dashboard.html">Open Student View</a>
+  </div>
+</div>
+<script src="js/supabase.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

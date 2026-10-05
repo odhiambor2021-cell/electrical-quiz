@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+<header class="topbar">
+  <strong>⚡ EEE Quiz</strong>
+  <a class="btn small-btn" href="dashboard.html">Dashboard</a>
+</header>
+<div class="container narrow">
+  <div class="card">
+    <div class="quiz-head">
+      <div><strong id="levelTitle">Quiz</strong><br><span id="progressText">Loading...</span></div>
+      <div class="timer">⏱ <span id="timer">30</span>s</div>
+    </div>
+    <div class="progress"><div id="progressBar"></div></div>
+    <h2 id="questionText">Loading question...</h2>
+    <div id="options" class="options"></div>
+    <p id="feedback" class="feedback"></p>
+    <button id="nextBtn" class="btn hidden">Next Question</button>
+  </div>
+  <div id="resultCard" class="card result hidden">
+    <h1>Quiz Complete</h1>
+    <div id="resultText"></div>
+    <div class="actions">
+      <a class="btn" href="leaderboard.html">Leaderboard</a>
+      <a class="btn secondary" href="dashboard.html">Dashboard</a>
+    </div>
+  </div>
+</div>
+<script src="js/supabase.js"></script>
+<script src="js/quiz.js"></script>
+</body>
+</html>
